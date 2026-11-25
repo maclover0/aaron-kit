@@ -21,8 +21,8 @@ Draft all seven parts from what the user has said. Look up facts yourself: sampl
 3. **Done**: what the user can see or do that proves it works.
 4. **Smallest useful version**: the fewest sources and visuals that still answer the main question. Take each one away in turn; whatever can go without losing that answer goes to Not yet. One source and one visual is the usual result.
 5. **Scope edges**: **Not yet** (wanted, later) and **Out of scope** (decided against).
-6. **Shape**: the modules and the language (by step 1 of `../basic-setup/SKILL.md`; read it), plus constraints, risks and unknowns. Each source gets its own module that turns raw data into a shared form; each visual reads only the shared form. Then run the **growth test**: for every Not yet item, name the modules that change when it is added. More than one new module and one line to register it means the shape needs rework, or the cost goes in the risks.
-7. **Build steps**: in order, each with its expense label from `resourcing`. The first is a tracer bullet: one real source through to one rough visual, choosing the riskiest source.
+6. **Shape**: the modules, the language and the containers (by the Stack rules in `../resourcing/SKILL.md`), plus constraints, risks and unknowns. Each source gets its own module that turns raw data into a shared form; each visual reads only the shared form. Then run the **growth test**: for every Not yet item, name the modules that change when it is added. More than one new module and one line to register it means the shape needs rework, or the cost goes in the risks.
+7. **Build steps**: in order, each with its expense label from `resourcing`. The first is a tracer bullet: one real source through to one rough visual, choosing the riskiest source, running in its container.
 
 The draft is done when every source feeds a visual, every visual has its sources, every Not yet item has its growth test, and every gap is marked `?`.
 

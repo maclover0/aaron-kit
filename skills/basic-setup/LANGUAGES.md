@@ -10,4 +10,6 @@ Keep the standard folders. Show each exception in the preview.
 
 **Others**: keep the layout until the language's tooling fights it.
 
-Add the language's build output to `.gitignore`.
+Add the language's build output to `.gitignore` and `.dockerignore`.
+
+**Containers**: write a `Dockerfile` with a stage named `build` that holds the source and can run the tests, and a small final stage that runs as user 1000 with `/app` as its folder. Use the language's official image at a pinned version. Replace `[test command]` in `compose.yaml`.

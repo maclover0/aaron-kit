@@ -6,8 +6,10 @@
 - Keep both sections of `GLOSSARY.md`, "Language" and "Files and folders", when editing it.
 - `core` may use `helpers`; `helpers` stays independent of `core`.
 - Keep modules small and separable so scope can grow.
-- Treat `.env` and `.secrets` as off limits. Variable names go in `.env.example`.
+- Treat `.env` and `.secrets` as off limits to every command. `.claude/settings.json` blocks only the file tools, so this also covers shell reads and anything that prints their values, such as `docker compose config` (use `config --quiet`). Variable names go in `.env.example`.
 
 ## Commands
 
-[Build, run and test commands, including how to test one package.]
+- Run: `docker compose up --build`
+- All tests: `docker compose run --rm --build test`
+- One package: [for Go, `docker compose run --rm --build test go test ./core/<package>`]

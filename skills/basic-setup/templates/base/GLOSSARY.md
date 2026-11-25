@@ -32,6 +32,16 @@ Project terms, one or two sentences each, with words to avoid.
 
 **docs/agents/**: issue tracker setup, only in projects that use a tracker. Other documents go in `data/docs/` or the root markdown files.
 
+**Dockerfile**: how the app's image is built. Its `build` stage also runs the tests.
+
+**compose.yaml**: how the app and its tests run, the same on every operating system.
+
+**.dockerignore**: what stays out of the image, including secrets.
+
+**.gitattributes**: keeps line endings the same on every operating system.
+
+**k8s/**: Kubernetes manifests, only in projects that use Kubernetes.
+
 **.env**: environment variables, some sensitive. Never committed.
 
 **.env.example**: the variable names without values. Committed.

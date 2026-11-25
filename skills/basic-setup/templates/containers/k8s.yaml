@@ -1,0 +1,47 @@
+# Create the settings first:
+#   kubectl create secret generic {{SLUG}}-env --from-env-file=.env
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{SLUG}}-data
+spec:
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{SLUG}}
+spec:
+  replicas: 1
+  # The data volume attaches to one node at a time.
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: {{SLUG}}
+  template:
+    metadata:
+      labels:
+        app: {{SLUG}}
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        fsGroup: 1000
+      containers:
+        - name: app
+          image: {{SLUG}}:dev
+          envFrom:
+            - secretRef:
+                name: {{SLUG}}-env
+                optional: true
+          volumeMounts:
+            - name: data
+              mountPath: /app/data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: {{SLUG}}-data

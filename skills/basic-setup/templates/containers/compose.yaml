@@ -1,0 +1,19 @@
+name: {{SLUG}}
+
+services:
+  app:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - ./data:/app/data
+    # When the app serves something, listen on 0.0.0.0 and publish it:
+    # ports: ["8080:8080"]
+
+  test:
+    profiles: [test]
+    build:
+      context: .
+      target: build
+    command: {{TESTCMD}}

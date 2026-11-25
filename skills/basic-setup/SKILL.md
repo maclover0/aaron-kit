@@ -7,19 +7,19 @@ description: Scaffold the user's standard project structure. Use when the user s
 
 `scripts/scaffold.sh` in this skill's folder does the creating. It adds what is missing and leaves every existing file as it is.
 
-## 1. Choose the language
+## 1. Choose the stack
 
-Go, unless performance, a needed library or a hard limitation gives a meaningful reason to switch. Preference order: Go, Rust, Python, C++, others. Raise the reason, and any case for mixing languages, before step 2. For anything except Go, read [LANGUAGES.md](LANGUAGES.md).
+Choose the language and containers by the Stack rules in `../resourcing/SKILL.md`. For anything except Go, read [LANGUAGES.md](LANGUAGES.md).
 
 ## 2. Preview
 
 Run:
 
 ```
-bash <skill folder>/scripts/scaffold.sh --plan --lang go <project folder>
+bash <skill folder>/scripts/scaffold.sh --plan --lang go --containers compose <project folder>
 ```
 
-Use `--lang none` for other languages. Show the user the result, including any language exception, and wait for their OK.
+Use `--lang none` for other languages, and `--containers k8s` (Compose plus `k8s/`) or `none` when step 1 chose it. Show the user the result, including any language exception, and wait for their OK.
 
 If `EXTRA` entries show a project that already has a different layout, report the differences and stop there: the user decides what, if anything, changes.
 
@@ -31,4 +31,4 @@ The step is done when every `WARN` line has been shown to the user with a propos
 
 ## 4. Fill in what is known
 
-Replace the bracketed prompts in `README.md`, `CLAUDE.md` and `DESIGN.md` with what the user has already said, and keep the rest as prompts. Leave the first commit to the user.
+Replace the bracketed prompts in `README.md`, `CLAUDE.md` and `DESIGN.md` with what the user has already said, and keep the rest as prompts. Without containers, replace the Docker commands in `README.md` and `CLAUDE.md`. Leave the first commit to the user.

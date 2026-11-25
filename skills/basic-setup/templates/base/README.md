@@ -4,4 +4,8 @@
 
 ## Run
 
-[Commands to set up and start it.]
+Needs Docker. Copy `.env.example` to `.env` and fill it in, then:
+
+```
+docker compose up --build
+```
