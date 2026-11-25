@@ -5,7 +5,7 @@ Personal skills for Claude Code, packaged as a plugin and its own marketplace.
 ## Install
 
 ```
-/plugin marketplace add <github-owner>/<repo>
+/plugin marketplace add maclover0/aaron-kit
 /plugin install aaron-kit@aaron-kit
 /plugin install mattpocock-skills@claude-plugins-official
 ```
