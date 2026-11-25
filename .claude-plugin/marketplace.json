@@ -1,0 +1,12 @@
+{
+  "name": "aaron-kit",
+  "description": "Personal skills for use across projects and machines",
+  "owner": { "name": "aaron-kit" },
+  "plugins": [
+    {
+      "name": "aaron-kit",
+      "source": "./",
+      "description": "Personal skills for use across projects and machines"
+    }
+  ]
+}

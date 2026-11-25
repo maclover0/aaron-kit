@@ -1,0 +1,3 @@
+module {{MODULE}}
+
+go {{GOVERSION}}
