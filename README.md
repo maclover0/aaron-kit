@@ -14,7 +14,7 @@ Personal skills for Claude Code, packaged as a plugin and its own marketplace.
 
 - `/aaron-kit:basic-setup`: creates the standard project structure. Previews first and never overwrites.
 - `/aaron-kit:design-steps`: turns a raw idea into a plan in `DESIGN.md`, starting from its data sources and visuals.
-- `/aaron-kit:resourcing`: token, testing and skill-choice preferences. A session-start hook loads it automatically.
+- `/aaron-kit:resourcing`: token, testing, commit message and skill-choice preferences. A session-start hook loads it automatically.
 
 ## Layout
 

@@ -28,6 +28,14 @@ Rate each change's risk in one line, then test to match. When torn between two l
 
 Keep tests runnable per package so each level is possible.
 
+## Commit messages
+
+When a turn leaves uncommitted changes you made in a git repo, end the reply with a commit message alone in a code block, ready to copy. The user does the committing.
+
+- Base it on `git status` and the diff, and cover everything uncommitted, including changes from earlier turns and the user's own.
+- Subject: imperative, specific, under 72 characters. Then, only when the subject can't carry it, a blank line and one to three `-` bullets on what changed and why.
+- Unrelated changes get one block each, with the files it covers named above it.
+
 ## Skills by stage
 
 From `mattpocock-skills` unless marked; if it is missing, say so once. Load a skill when its stage arrives. In very light projects use only diagnosing-bugs. "Suggest" skills run only when the user types them, so name the command and the reason.
