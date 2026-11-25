@@ -30,11 +30,11 @@ Keep tests runnable per package so each level is possible.
 
 ## Skills by stage
 
-From `mattpocock-skills`; if it is missing, say so once. Load a skill when its stage arrives. In very light projects use only diagnosing-bugs. "Suggest" skills run only when the user types them, so name the command and the reason.
+From `mattpocock-skills` unless marked; if it is missing, say so once. Load a skill when its stage arrives. In very light projects use only diagnosing-bugs. "Suggest" skills run only when the user types them, so name the command and the reason.
 
 | Stage | Load | Suggest |
 |---|---|---|
-| Vague idea or plan | grilling | `/wayfinder` if too big for one session |
+| Vague idea, or one outside the plan | design-steps (this plugin), then grilling | `/wayfinder` if too big for one session |
 | Look or logic unclear | prototype | |
 | Naming, defining terms | domain-modeling | |
 | Structuring `core` | codebase-design | `/improve-codebase-architecture` for existing code |
